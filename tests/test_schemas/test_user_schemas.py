@@ -109,11 +109,6 @@ def test_user_base_url_invalid(url, user_base_data):
     with pytest.raises(ValidationError):
         UserBase(**user_base_data)
 
-
-import pytest
-from pydantic import ValidationError
-from app.schemas.user_schemas import UserCreate
-
 @pytest.mark.parametrize("password", [
     "Secure*1234",       # Contains uppercase, lowercase, digit, special character, and meets length requirement
     "MySecure$456",      # Meets all conditions
