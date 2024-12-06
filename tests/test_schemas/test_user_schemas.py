@@ -108,3 +108,17 @@ def test_user_base_url_invalid(url, user_base_data):
     user_base_data["profile_picture_url"] = url
     with pytest.raises(ValidationError):
         UserBase(**user_base_data)
+
+
+@pytest.mark.parametrize("password", [
+    "Secure*1234",       # Contains uppercase, lowercase, digit, special character, and meets length requirement
+    "MySecure$456",      # Meets all conditions
+    "Valid@2021Test",    # Meets all conditions
+    "!Strong1Password",  # Meets all conditions
+])
+def test_password_valid(password, user_create_data):
+    user_create_data["password"] = password
+    user = UserCreate(**user_create_data)
+    assert user.password == password
+
+
