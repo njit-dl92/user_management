@@ -17,6 +17,21 @@ def validate_url(url: Optional[str]) -> Optional[str]:
         raise ValueError('Invalid URL format')
     return url
 
+@validator('password')
+def validate_password(cls, password):
+    if len(password) < 8:
+        raise ValueError("Password must be at least 8 characters long")
+    if not any(char.isdigit() for char in password):
+        raise ValueError("Password must include at least one digit")
+    if not any(char.isupper() for char in password):
+        raise ValueError("Password must include at least one uppercase letter")
+    if not any(char.islower() for char in password):
+        raise ValueError("Password must include at least one lowercase letter")
+    if not any(char in "!@#$%^&*()-_=+[{]}\|;:'\",<.>/?`~" for char in password):
+        raise ValueError("Password must include at least one special character")
+    return password
+
+
 class UserBase(BaseModel):
     email: EmailStr = Field(..., example="john.doe@example.com")
     nickname: Optional[str] = Field(None, min_length=3, pattern=r'^[\w-]+$', example=generate_nickname())
