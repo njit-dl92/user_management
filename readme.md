@@ -31,7 +31,7 @@
 
 ### **Testing and Quality Assurance**  
 - **Added 10+ test cases**:  
-   - Comprehensive test coverage was implemented for all user profile updates and professional status upgrade scenarios, validating functionality and handling edge cases.  
+   - Comprehensive test coverage was implemented for all user profile updates and professional status upgrade scenarios, validating functionality and handling edge cases.  [Link for 10+ test cases](https://github.com/njit-dl92/user_management/pull/14/files)
 
 **Code and Test Details**:  
 - [Feature 9 Implementation - GitHub Repository](https://github.com/njit-dl92/user_management/blob/feature/feature_9_implementation)  
@@ -40,11 +40,11 @@
 
 ### **Issues Resolved**  
 Solved 5 major issues to improve the project:  
-1. Application unable to run due to version mismatch.  
-2. Action execution failing for the feature branch.  
-3. Password validation missing during user registration.  
-4. Vulnerability in `python-multipart` dependency.  
-5. No default role assigned during user creation.  
+1.	Application unable to run due to version mismatch [Issue 1 Link](https://github.com/njit-dl92/user_management/issues/18) 
+2.	Action execution failing for the feature branch [Issue 2 link](https://github.com/njit-dl92/user_management/issues/19)
+3.	Password validation missing during user registration  [Issue 3 link](https://github.com/njit-dl92/user_management/issues/21)
+4.	Vulnerability in python-multipart dependency  [Issue 4 link](https://github.com/njit-dl92/user_management/issues/23)
+5.	No default role assigned during user creation  [Issue 5 link](https://github.com/njit-dl92/user_management/issues/18)
 
 Details:  
 - [GitHub Issues](https://github.com/njit-dl92/user_management/issues)  
