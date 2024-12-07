@@ -1,27 +1,67 @@
-Implementation for Feature 9: User Profile Management
-In this update, I successfully implemented enhancements to the user profile management functionality, providing the ability for users to update their profile fields and enabling managers and admins to upgrade users to professional status.
 
-Implemented API Endpoints:
-/users/updateProfile
-This endpoint allows users to update their profile data, such as their name, bio, location, etc., offering a flexible and user-friendly experience for profile management.
+## **Final Project: User Management System - Feature 9**  
 
-/users/{user_id}/updateToProfessional
-This endpoint enables managers and admins to update a user's status to "professional," empowering the administrative team to manage user designations and ensure proper user categorization.
+### **Implemented Features and Enhancements**  
+1. **Profile Management**  
+   - Implemented a feature allowing users to update profile fields such as name, bio, and location through a flexible and user-friendly API.  
 
-Email Notification System
-An email notification is automatically sent to users once their designation is upgraded to "professional." This ensures users are informed of their updated status and promotes a seamless user experience.
+   **API Endpoint**:  
+   - `/users/updateProfile`  
+   Enables users to modify their profile data effortlessly.  
 
-Technical Updates and Deployment:
-Due to some vulnerabilities in the initial setup, the CI/CD pipeline failed. To resolve this and ensure a successful deployment, I updated the following dependencies:
+2. **User Status Upgrade**  
+   - Developed functionality for managers and admins to update a user's status to "professional."  
 
-PyMySQL==1.1.1
-starlette>=0.40.0
-fastapi>=0.103.0
+   **API Endpoint**:  
+   - `/users/{user_id}/updateToProfessional`  
+   Empowers admins to manage user designations effectively.  
 
-Testing and Quality Assurance:
-I added over 10 test cases to ensure thorough coverage of all scenarios related to user profile updates and professional status upgrades. The tests validate both the functionality and edge cases, ensuring robustness and reliability.
+3. **Email Notification System**  
+   - Added automatic email notifications for users when their designation is upgraded to "professional," ensuring they are informed of changes in their status.  
 
-The detailed code changes and test cases for this feature can be found in the following GitHub repository:
-GitHub Link: [Feature 9 Implementation](https://github.com/njit-dl92/user_management/blob/feature/feature_9_implementation)
+---
 
-![alt text](image.png)
+### **Technical Updates and Deployment**  
+- To resolve initial CI/CD pipeline failures and ensure smooth deployment, the following dependencies were updated:  
+  - **PyMySQL==1.1.1**  
+  - **starlette>=0.40.0**  
+  - **fastapi>=0.103.0**  
+
+---
+
+### **Testing and Quality Assurance**  
+- **Added 10+ test cases**:  
+   - Comprehensive test coverage was implemented for all user profile updates and professional status upgrade scenarios, validating functionality and handling edge cases.  
+
+**Code and Test Details**:  
+- [Feature 9 Implementation - GitHub Repository](https://github.com/njit-dl92/user_management/blob/feature/feature_9_implementation)  
+
+---
+
+### **Issues Resolved**  
+Solved 5 major issues to improve the project:  
+1. Application unable to run due to version mismatch.  
+2. Action execution failing for the feature branch.  
+3. Password validation missing during user registration.  
+4. Vulnerability in `python-multipart` dependency.  
+5. No default role assigned during user creation.  
+
+Details:  
+- [GitHub Issues](https://github.com/njit-dl92/user_management/issues)  
+
+---
+
+### **Deployment**  
+- Successfully deployed the project to DockerHub.  
+  - [DockerHub Repository](https://hub.docker.com/repository/docker/njitdl92/user_management/general)  
+
+- Configured GitHub Actions for automated workflows.  
+  - [Successful Workflows](https://github.com/njit-dl92/user_management/actions)  
+
+---
+
+### **Project Links**  
+- **GitHub Repository**: [User Management Project](https://github.com/njit-dl92/user_management)  
+- **DockerHub Repository**: [DockerHub Link](https://hub.docker.com/repository/docker/njitdl92/user_management/general)  
+- **GitHub Actions**: [Successful Workflows](https://github.com/njit-dl92/user_management/actions)  
+- **Issues**: [GitHub Issues](https://github.com/njit-dl92/user_management/issues)  
